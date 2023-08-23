@@ -21,8 +21,13 @@
     const tt = document.querySelector(".tt");
 
     tt.addEventListener("mouseenter", function () {
-      tt.classList.toggle("stylea");
+      tt.classList.add("stylea");
       console.log("进入事件!");
+    });
+
+    tt.addEventListener("mouseleave", function () {
+      tt.classList.remove("stylea");
+      console.log("移出事件!");
     });
   </script>
 </html>
