@@ -22,17 +22,36 @@
         margin: 0 auto; /* 將左右外邊距設置為auto以水平置中 */
       }
 
-      .card {
+      .header {
         margin-top: 50px;
+        position: relative;
+        background-image: url(./img/cardFront.png);
+        height: 1063px;
+        background-repeat: no-repeat;
+        background-position: center;
       }
 
       .button {
         margin-top: 150px;
       }
+
+      .message {
+        position: fixed;
+        bottom: 0; /* 放在底部 */
+        left: 0; /* 左側對齊 */
+        width: 100%; /* 撐滿寬度 */
+        text-align: center; /* 文字水平置中 */
+
+        /* background-color: pink; */
+        color: rgb(168, 159, 159);
+      }
     </style>
   </head>
   <body>
-    <img class="card" src="./img/cardFront.png" alt="" />
+    <div class="header">
+      <div class="message" style="display: none">拖動螢幕以顯示更多資訊</div>
+    </div>
+
     <img src="./img/203-all.jpg" alt="" />
     <img src="./img/302.jpg" alt="" />
     <img src="./img/201.jpg" alt="" />
@@ -41,5 +60,34 @@
     <img src="./img/704-706.jpg" alt="" />
     <img src="./img/801.jpg" alt="" />
     <img class="button" src="./img/cardBack.png" alt="" />
+
+    <script>
+      const messageDiv = document.querySelector(".message");
+
+      // 獲取畫面高度的前1/10位置
+      var threshold = window.innerHeight / 10;
+
+      function hideMessage() {
+        messageDiv.style.display = "none";
+      }
+
+      let time = 0;
+      setInterval(function () {
+        // messageDiv.style.display = "block";
+        time++;
+        console.log("time = " + time);
+        console.log("window.scrollY = " + window.scrollY);
+        if (time === 2 && window.scrollY < 400) {
+          console.log("判斷成功");
+          messageDiv.style.display = "block";
+        }
+      }, 1000);
+
+      // 監聽頁面滾動事件，移動則重新倒數
+      window.addEventListener("scroll", function () {
+        time = 0;
+        messageDiv.style.display = "none";
+      });
+    </script>
   </body>
 </html>
