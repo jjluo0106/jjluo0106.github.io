@@ -7,6 +7,11 @@ body {
   background-color: rgb(240, 238, 230);
 }
 
+img {
+  max-width: 100%;
+  height: auto; /* 保持原始比例 */
+}
+
 li {
   list-style: none;
 }
