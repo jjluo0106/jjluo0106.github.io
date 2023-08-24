@@ -4,129 +4,16 @@
 }
 
 body {
-  background-color: rgb(240, 238, 230);
+  background-color: rgb(8, 4, 4);
 }
 
 img {
+  display: block; /* 讓圖片成為區塊元素，佔據整個寬度 */
   max-width: 100%;
   height: auto; /* 保持原始比例 */
+  margin: 0 auto; /* 將左右外邊距設置為auto以水平置中 */
 }
 
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-
-/* 版心 */
-.wrapper {
-  width: 1600px;
-  margin: 0 auto;
-}
-
-/* 頭部 */
-.header {
-  height: 60px;
-  background-color: rgb(206, 206, 206);
-  /* margin-top: 30px;
-  margin-bottom: 30px; */
-  /* 設auto是為了不覆蓋wrapper設定 */
-  margin: 30px auto;
-  border-radius: 0 30px;
-}
-
-h1 {
-  float: left;
-}
-
-.nav {
-  /* 跟父級一樣 */
-  /* height: 42px; */
-
-  float: right;
-  margin: 0 20px;
-}
-
-.nav li {
-  float: left;
-  margin-right: 20px;
-}
-
-.nav li a {
-  display: block;
-  padding: 0 9px;
-  /* father/2? */
-  height: 60px;
-  line-height: 60px;
-
-  font-size: 18px;
-}
-/* 懸停樣式 */
-.nav li a:hover {
-  border-bottom: 2px solid rgb(3, 217, 255);
-}
-
-.search {
-  float: right;
-  /* background-color: yellow; */
-  width: 400px;
-  height: 40px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-.search input {
-  /* add float to go with button*/
-  float: left;
-  padding-left: 50px;
-  width: 300px;
-  height: 36px;
-  font-size: 25px;
-  border: 0;
-}
-/* ::是偽元素選擇器 */
-.search input::placeholder {
-  font-size: 25px;
-}
-.search button {
-  float: left;
-  background-image: url(../img/magnifier.jpg);
-  background-color: rgb(248, 248, 248);
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-right: 0;
-  width: 46px;
-  height: 36px;
-  border: 0;
-}
-.search img {
-  width: 38px;
-  /* height: 30px;  */
-}
-
-.banner {
-  height: 420px;
-  background-color: orange;
-}
-
-.banner .wrapper {
-  height: 420px;
-  background-color: #fff;
-  background-image: url(../img/appleloge.jpg);
-}
-
-.box {
-  margin-top: 35px;
-}
-.box .title {
-  font-size: 20px;
-  background-color: pink;
+.card {
+  margin-top: 50px;
 }
