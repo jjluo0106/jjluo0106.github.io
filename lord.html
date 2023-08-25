@@ -34,20 +34,41 @@
         margin: 0 auto; /* 將左右外邊距設置為auto以水平置中 */
       }
 
-      /* .header {
-        margin-top: 50px;
-        position: relative;
-        background-image: url(./img/cardFront.png);
-        height: 1063px;
-        background-repeat: no-repeat;
-        background-position: center;
-      } */
-
       .top {
         margin-bottom: 200px;
       }
       .button {
         margin-top: 250px;
+      }
+
+      .order a {
+        position: fixed;
+        top: -50px;
+        right: -50px;
+        background-color: rgba(255, 192, 203, 0.5);
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        animation: breatheAnimation 3s infinite; /* 使用動畫效果 */
+      }
+      /* 定義動畫 */
+      @keyframes breatheAnimation {
+        0%,
+        100% {
+          opacity: 0.2;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .orderWord {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        color: red;
       }
 
       .message {
@@ -67,6 +88,12 @@
       羅德辦公椅-羅德實業股份有限公司-休閒椅，辦公椅，沙發椅，睡覺椅，長照椅，老人椅，老闆娘，203，302，719，801
     </h1>
     <div class="header">
+      <div class="order">
+        <div class="orderWord">線上下單</div>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSexHiEMIEme34ZW0yLBHmKTUewdqhxxnMIPglV4W0WVG3Fq8A/formResponse"
+        ></a>
+      </div>
       <div class="message" style="display: none">拖動螢幕以顯示更多資訊</div>
     </div>
 
