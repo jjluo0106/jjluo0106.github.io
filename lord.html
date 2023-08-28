@@ -14,76 +14,7 @@
       name="Keyword"
       content="休閒椅，辦公椅，沙發椅，睡覺椅，長照椅，203，302，719，801"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      h1 {
-        display: none;
-      }
-
-      body {
-        background-color: rgb(8, 4, 4);
-      }
-
-      img {
-        display: block; /* 讓圖片成為區塊元素，佔據整個寬度 */
-        max-width: 100%;
-        height: auto; /* 保持原始比例 */
-        margin: 0 auto; /* 將左右外邊距設置為auto以水平置中 */
-      }
-
-      .top {
-        margin-bottom: 200px;
-      }
-      .button {
-        margin-top: 250px;
-      }
-
-      .order a {
-        position: fixed;
-        top: -50px;
-        right: -50px;
-        background-color: rgb(255, 174, 0);
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-        animation: breatheAnimation 3s infinite; /* 使用動畫效果 */
-      }
-      /* 定義動畫 */
-      @keyframes breatheAnimation {
-        0%,
-        100% {
-          opacity: 0.1;
-        }
-        50% {
-          opacity: 0.4;
-        }
-      }
-
-      .orderWord {
-        font-size: 26px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        color: rgb(168, 159, 159);
-      }
-
-      .message {
-        font-size: 26px;
-        position: fixed;
-        bottom: 0; /* 放在底部 */
-        left: 0; /* 左側對齊 */
-        width: 100%; /* 撐滿寬度 */
-        text-align: center; /* 文字水平置中 */
-
-        /* background-color: pink; */
-        color: rgb(168, 159, 159);
-      }
-    </style>
+    <link rel="stylesheet" href="./css/lord.css" />
   </head>
   <body>
     <h1>
@@ -95,6 +26,12 @@
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSexHiEMIEme34ZW0yLBHmKTUewdqhxxnMIPglV4W0WVG3Fq8A/formResponse"
         ></a>
+      </div>
+
+      <div class="container">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
       </div>
       <div class="message" style="display: none">拖動螢幕以顯示更多資訊</div>
     </div>
@@ -128,7 +65,7 @@
         time++;
         console.log("time = " + time);
         console.log("window.scrollY = " + window.scrollY);
-        if (time === 2 && window.scrollY < 400) {
+        if (time === 1 && window.scrollY < 400) {
           console.log("判斷成功");
           messageDiv.style.display = "block";
         }
